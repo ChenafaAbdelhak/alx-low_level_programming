@@ -5,19 +5,27 @@
  */
 void print_to_98(int n)
 {
-	int i;
-
 	if (n <= 98)
 	{
-		for (i = n; i <= 98; i++)
+		for (; n <= 98; n++)
 		{
-			/* Print each digit of the number */
-			if (i >= 10)
-				_putchar('0' + (i / 10));
-			_putchar('0' + (i % 10));
+			/* Handle negative numbers */
+			if (n < 0)
+			{
+				_putchar('-');
+				if (n <= -10)
+					_putchar('0' + (-n / 10));
+				_putchar('0' + (-n % 10));
+			}
+			else
+			{
+				if (n >= 10)
+					_putchar('0' + (n / 10));
+				_putchar('0' + (n % 10));
+			}
 
 			/* Print comma and space for all but the last number */
-			if (i != 98)
+			if (n != 98)
 			{
 				_putchar(',');
 				_putchar(' ');
@@ -26,15 +34,25 @@ void print_to_98(int n)
 	}
 	else
 	{
-		for (i = n; i >= 98; i--)
+		for (; n >= 98; n--)
 		{
-			/* Print each digit of the number */
-			if (i >= 10)
-				_putchar('0' + (i / 10));
-			_putchar('0' + (i % 10));
+			/* Handle negative numbers */
+			if (n < 0)
+			{
+				_putchar('-');
+				if (n <= -10)
+					_putchar('0' + (-n / 10));
+				_putchar('0' + (-n % 10));
+			}
+			else
+			{
+				if (n >= 10)
+					_putchar('0' + (n / 10));
+				_putchar('0' + (n % 10));
+			}
 
 			/* Print comma and space for all but the last number */
-			if (i != 98)
+			if (n != 98)
 			{
 				_putchar(',');
 				_putchar(' ');
