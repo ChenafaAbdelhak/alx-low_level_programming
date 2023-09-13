@@ -9,6 +9,7 @@ int main(void)
 	unsigned long int a, b, c, b1, b2, c1, c2;
 	b = 1;
 	c = 2;
+	
 	printf("%lu", b);
 	for (a = 1; a < 91; a++)
 	{
