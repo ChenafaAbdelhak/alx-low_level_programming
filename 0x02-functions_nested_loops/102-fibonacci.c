@@ -16,7 +16,7 @@ int main(void)
 		printf("%ld, ", n1 + n2);
 		tmp = n1;
 		n1 = n2;
-		n2 = n2 + n1;
+		n2 = n2 + tmp;
 		i++;
 	}
 	putchar('\n');
