@@ -1,37 +1,34 @@
 #include <stdio.h>
 
 /**
- *main - Entry point
- *Return: Always 0
+ *main - beginning
+ *Return: 0
  */
 int main(void)
 {
-	int fib_a, fib_b, fib_c, fib_b1, fib_b2, fib_c1, fib_c2;
-	fib_b = 1;
-	fib_c = 2;
-
-	printf("%d", fib_b);
-
-	for (fib_a = 1; fib_a < 91; fib_a++)
+	unsigned long int a, b, c, b1, b2, c1, c2;
+	b = 1;
+	c = 2;
+	printf("%lu", b);
+	for (a = 1; a < 91; a++)
 	{
-		printf(", %d", fib_c);
-		fib_c = fib_c + fib_b;
-		fib_b = fib_c - fib_b;
+		printf(", %lu", c);
+		c = c + b;
+		b = c - b;
 	}
 
-	fib_b1 = fib_b / 1000000000;
-	fib_b2 = fib_b % 1000000000;
-	fib_c1 = fib_c / 1000000000;
-	fib_c2 = fib_c % 1000000000;
-
-	for (fib_a = 92; fib_a < 99; ++fib_a)
+	b1 = b / 1000000000;
+	b2 = b % 1000000000;
+	c1 = c / 1000000000;
+	c2 = c % 1000000000;
+	for (a = 92; a < 99; ++a)
 	{
-		printf(", %d", fib_c1 + (fib_c2 / 1000000000));
-		printf("%d", fib_c2 % 1000000000);
-		fib_c1 = fib_c1 + fib_b1;
-		fib_b1 = fib_c1 - fib_b1;
-		fib_c2 = fib_c2 + fib_b2;
-		fib_b2 = fib_c2 - fib_b2;
+		printf(", %lu", c1 + (c2 / 1000000000));
+		printf("%lu", c2 % 1000000000);
+		c1 = c1 + b1;
+		b1 = c1 - b1;
+		c2 = c2 + b2;
+		b2 = c2 - b2;
 	}
 
 	printf("\n");
