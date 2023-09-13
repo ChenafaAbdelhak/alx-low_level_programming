@@ -11,8 +11,6 @@ int main(void)
 
 	n1 = 1;
 	n2 = 2;
-	tmp = 0;
-	i++;
 	while (i <= 50)
 	{
 		printf("%ld, ", n1 + n2);
