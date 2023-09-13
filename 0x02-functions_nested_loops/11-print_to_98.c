@@ -1,7 +1,9 @@
 #include "main.h"
+#include <stdio.h>
 /**
- * print_to_98 - prints all natural numbers from n to 98
- * @n: The starting number
+ * print_to_98 - prints all natural numbers to 98
+ * @n: The number to start 
+ * Return: Always 0.
  */
 void print_to_98(int n)
 {
@@ -9,26 +11,15 @@ void print_to_98(int n)
 	{
 		for (; n <= 98; n++)
 		{
-			/* Handle negative numbers */
-			if (n < 0)
+			if (n == 98)
 			{
-				_putchar('-');
-				if (n <= -10)
-					_putchar('0' + (-n / 10));
-				_putchar('0' + (-n % 10));
+				printf("%d", n);
+				printf("\n");
+				break;
 			}
 			else
 			{
-				if (n >= 10)
-					_putchar('0' + (n / 10));
-				_putchar('0' + (n % 10));
-			}
-
-			/* Print comma and space for all but the last number */
-			if (n != 98)
-			{
-				_putchar(',');
-				_putchar(' ');
+				printf("%d, ", n);
 			}
 		}
 	}
@@ -36,29 +27,15 @@ void print_to_98(int n)
 	{
 		for (; n >= 98; n--)
 		{
-			/* Handle negative numbers */
-			if (n < 0)
+			if (n == 98)
 			{
-				_putchar('-');
-				if (n <= -10)
-					_putchar('0' + (-n / 10));
-				_putchar('0' + (-n % 10));
+				printf("%d", n);
+				printf("\n");
+				break;
 			}
 			else
-			{
-				if (n >= 10)
-					_putchar('0' + (n / 10));
-				_putchar('0' + (n % 10));
-			}
-
-			/* Print comma and space for all but the last number */
-			if (n != 98)
-			{
-				_putchar(',');
-				_putchar(' ');
+			{printf("%d, ", n);
 			}
 		}
 	}
-
-	_putchar('\n');
 }
