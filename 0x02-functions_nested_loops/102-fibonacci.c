@@ -7,10 +7,10 @@
 
 int main(void)
 {
-	long n1, n2, tmp, i = 2;
+	long n1, n2, tmp, i = 1;
 
-	n1 = 1;
-	n2 = 2;
+	n1 = 0;
+	n2 = 1;
 	while (i <= 50)
 	{
 		printf("%ld, ", n1 + n2);
