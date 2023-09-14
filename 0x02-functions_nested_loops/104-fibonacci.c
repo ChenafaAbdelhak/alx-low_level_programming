@@ -1,49 +1,37 @@
 #include <stdio.h>
 
 /**
- * main - Prints the first 98 Fibonacci numbers, starting with
- *        1 and 2, separated by a comma followed by a space.
- * Return: Always 0.
+ *main - beginning
+ *Return: 0
  */
 int main(void)
 {
-	int index;
-	unsigned long prev_fib = 0, current_fib = 1, sum;
-	unsigned long prev_fib_half1, prev_fib_half2;
-	unsigned long current_fib_half1, current_fib_half2;
-	unsigned long half1, half2;
+	unsigned long int a, b, c, b1, b2, c1, c2;
 
-	for (index = 0; index < 92; index++)
+	b = 1;
+	c = 2;
+	printf("%lu", b);
+	for (a = 1; a < 91; a++)
 	{
-		sum = prev_fib + current_fib;
-		printf("%lu, ", sum);
-		prev_fib = current_fib;
-		current_fib = sum;
+		printf(", %lu", c);
+		c = c + b;
+		b = c - b;
 	}
 
-	prev_fib_half1 = prev_fib / 10000000000;
-	current_fib_half1 = current_fib / 10000000000;
-	prev_fib_half2 = prev_fib % 10000000000;
-	current_fib_half2 = current_fib % 10000000000;
-
-	for (index = 93; index < 99; index++)
+	b1 = b / 1000000000;
+	b2 = b % 1000000000;
+	c1 = c / 1000000000;
+	c2 = c % 1000000000;
+	for (a = 92; a < 99; ++a)
 	{
-		half1 = prev_fib_half1 + current_fib_half1;
-		half2 = prev_fib_half2 + current_fib_half2;
-
-		if (prev_fib_half2 + current_fib_half2 > 999999999)
-		{
-			half1 += 1;
-			half2 %= 10000000000;
-		}
-		printf("%lu%010lu", half1, half2);
-		if (index != 98)
-			printf(", ");
-		prev_fib_half1 = current_fib_half1;
-		prev_fib_half2 = current_fib_half2;
-		current_fib_half1 = half1;
-		current_fib_half2 = half2;
+		printf(", %lu", c1 + (c2 / 1000000000));
+		printf("%lu", c2 % 1000000000);
+		c1 = c1 + b1;
+		b1 = c1 - b1;
+		c2 = c2 + b2;
+		b2 = c2 - b2;
 	}
+
 	printf("\n");
 	return (0);
 }
