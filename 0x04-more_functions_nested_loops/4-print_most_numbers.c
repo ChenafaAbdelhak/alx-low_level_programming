@@ -3,7 +3,7 @@
 /**
  *  print_most_numbers - print numbers
  */
-void print_numbers(void)
+void print_most_numbers(void)
 {
 	int i = 48;
 
