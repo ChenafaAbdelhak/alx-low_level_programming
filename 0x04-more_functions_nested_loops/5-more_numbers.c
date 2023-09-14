@@ -8,9 +8,9 @@ void more_numbers(void)
 
 	while (i <= '1')
 	{
+		j = 0;
 		if (i > '0')
 			_putchar(i);
-		i++;
 		while (j <= '9')
 		{
 			if (i == '1' && j == '5')
@@ -18,6 +18,7 @@ void more_numbers(void)
 			_putchar(j);
 			j++;
 		}
+		i++;
 	}
 	_putchar('\n');
 }
