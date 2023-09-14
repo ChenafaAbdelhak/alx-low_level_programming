@@ -13,6 +13,8 @@ void more_numbers(void)
 		i++;
 		while (j <= '9')
 		{
+			if (i == '1' && j == '5')
+				break;
 			_putchar(j);
 			j++;
 		}
