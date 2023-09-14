@@ -4,8 +4,12 @@
  */
 void more_numbers(void)
 {
-	int i = 0, j = 0;
+	int i = 0, j = 0, k;
 
+	for (k = 0; k < 10; k++)
+	{
+		i = 0;
+		j = 0;
 	while (i <= 1)
 	{
 		if (i == 1 && (j % 10) == 5)
@@ -18,4 +22,5 @@ void more_numbers(void)
 		j++;
 	}
 	_putchar('\n');
+	}
 }
