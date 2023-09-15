@@ -17,7 +17,8 @@ int main(void)
 			printf("%d",i);
 		putchar(' ');
 	}
-	putchar('\n');
+		if (i != 100)
+			putchar('\n');
 
 	return (0);
 }
