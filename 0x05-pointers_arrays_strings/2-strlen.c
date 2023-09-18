@@ -2,7 +2,7 @@
 /**
  * _strlen - calculete length
  * @s: string
- * return: length
+ * Return: length
  */
 int _strlen(char *s)
 {
