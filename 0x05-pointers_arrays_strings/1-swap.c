@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * swap_int - inverse 
+ * swap_int - inverse
  * @a: a
  * @b: b
  */
