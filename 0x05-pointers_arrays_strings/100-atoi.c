@@ -6,7 +6,7 @@
  *
  *Return: the integer value of the string
  */
-long int _atoi(char *s)
+int _atoi(char *s)
 {
 	int sign = 1;
 	unsigned int result = 0;
