@@ -11,8 +11,6 @@ int _atoi(char *s)
 	int sign = 1;
 	int result = 0;
 
-	if (s == NULL)
-		return 0;
 	while (*s)
 	{
 		if (*s == '-')
