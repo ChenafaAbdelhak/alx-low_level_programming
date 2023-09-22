@@ -1,28 +1,22 @@
 #include "main.h"
 /**
- * print_number - print
- * @n: int
- *
+ * print_number - print numbers
+ * @n: n
+ * Return: 0
  */
-
 void print_number(int n)
 {
-	int len = 1, tmp = n;
+	unsigned int n1;
 
-	if (n == 0)
-		_putchar('0');
+	n1 = n;
 	if (n < 0)
+	{
 		_putchar('-');
-	while (tmp !=  0)
-	{
-		tmp = tmp / 10;
-		len *= 10;
+		n1 = -n;
 	}
-	while (len > 1)
+	if (n1 / 10 != 0)
 	{
-		_putchar((n / len) + 48);
-		if (n - len > 0)
-			n -= (n / len);
-		len /= 10;
+		print_number(n1 / 10);
 	}
+	_putchar((n1 % 10) + '0');
 }
