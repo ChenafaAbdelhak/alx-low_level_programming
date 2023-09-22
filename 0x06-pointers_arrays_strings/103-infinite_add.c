@@ -10,9 +10,9 @@ char *infinite_add(char *n1, char *n2, char *r, int size_r)
 {
 	int len1 = 0, len2 = 0, i = 0, k = 0, res = 0, d1, d2;
 
-	while (n1[len1] != '\0')
+	while (n1[len1 + 1] != '\0')
 		len1++;
-	while (n2[len2] != '\0')
+	while (n2[len2 + 1] != '\0')
 		len2++;
 	while (i >= len1 && i >= len2)
 	{
