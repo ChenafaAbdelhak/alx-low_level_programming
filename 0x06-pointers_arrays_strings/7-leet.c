@@ -1,8 +1,8 @@
 #include "main.h"
 /**
- * leet - encode 
- * @n: input value
- * Return: n value
+ * leet - encode
+ * @str: input value
+ * Return: str
  */
 char *leet(char *str)
 {
