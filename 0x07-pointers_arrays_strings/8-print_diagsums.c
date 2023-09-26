@@ -1,6 +1,5 @@
 #include "main.h"
 #include <stdio.h>
-
 /**
  *print_diagsums - prints the sum of 2 diag
  *@a: array pointer
@@ -16,7 +15,7 @@ void print_diagsums(int *a, int size)
 			sum1 += *(a + i);
 		if (i % (size - 1) == 0 && i != 0 && i < size *size - 1)
 			sum2 += *(a + i);
-	}²
+	}
 
 	printf("%d, %d\n", sum1, sum2);
 }
