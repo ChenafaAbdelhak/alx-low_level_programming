@@ -10,20 +10,20 @@ int _sqrt_recursion(int n)
 		return (-1);
 	if (n == 0 || n == 1)
 		return (1);
-	return _sqrt_help(n, 2);
+	return (_sqrt_help(n, 2));
 }
 
 /**
  * _sqrt_help -sqrt
  * @n: number
- * @i: sqrt
+ * @guess: sqrt
  * Return: sqrt
  */
 int _sqrt_help(int n, int guess)
 {
-    if (guess * guess == n)
-        return guess;
-    if (guess * guess > n)
-        return -1;
-    return _sqrt_help(n, guess + 1);
+	if (guess * guess == n)
+		return (guess);
+	if ((guess * guess) > n)
+		return (-1);
+	return (_sqrt_help(n, guess + 1));
 }
