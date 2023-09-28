@@ -9,7 +9,7 @@ int is_prime_number(int n)
 {
 	if (n <= 0 || n == 1)
 		return (0);
-	return (help_prime(n, n -1));
+	return (help_prime(n, n - 1));
 }
 /**
  * help_prime - chekc prime
@@ -18,7 +18,7 @@ int is_prime_number(int n)
  * Return: test
  *
  */
-int help_prime(int n,int check)
+int help_prime(int n, int check)
 {
 	if (check == 1)
 		return (1);
