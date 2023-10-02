@@ -1,0 +1,25 @@
+#!/bin/bash
+
+# Source directory containing .c files
+src_dir="0x09-static_libraries"
+
+# Destination directory for .o files
+dest_dir="0x09-static_libraries"
+
+# Create the destination directory if it doesn't exist
+mkdir -p "$dest_dir"
+
+# Compile .c files into .o files in the destination directory
+for file in "$src_dir"/*.c; do
+    if [ -f "$file" ]; then
+        # Get the filename without the path and extension
+        filename=$(basename "$file")
+        filename_noext="${filename%.c}"
+
+        # Compile the .c file into a .o file
+        gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -c "$file" -o "$dest_dir/$filename_noext.o"
+    fi
+done
+
+echo ".o files compiled and placed in '$dest_dir'."
+
