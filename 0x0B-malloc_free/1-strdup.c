@@ -2,7 +2,7 @@
 #include <stddef.h>
 #include <stdlib.h>
 /**
- * strdup - create a copy
+ * _strdup - create a copy
  * @str: the string to copy
  * Return: ptr to the str
  */
@@ -16,10 +16,11 @@ char *_strdup(char *str)
 
 	while (str[i] != '\0')
 		i++;
+	i++;
 	strc = malloc(i);
 	if (strc == NULL)
 		return (NULL);
-	
+
 	while (j <= i)
 	{
 		strc[j] = str[j];
