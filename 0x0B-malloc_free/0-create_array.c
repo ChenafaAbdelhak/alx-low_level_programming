@@ -15,11 +15,11 @@ char *create_array(unsigned int size, char c)
 
 	if (str == NULL)
 		return (NULL);
-	while (i < size - 1)
+	while (i < size)
 	{
 		str[i] = c;
 		i++;
 	}
-	str[size - 1] = '\0';
+	str[size] = '\0';
 	return (str);
 }
