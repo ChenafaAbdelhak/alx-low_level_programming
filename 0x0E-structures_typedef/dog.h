@@ -1,6 +1,13 @@
 #ifndef file_name
 #define file_name
 
+
+/**
+ * dog_t - Typedef for struct dog
+ */
+typedef struct dog dog_t;
+
+
 /**
  * struct dog - a stcrut for a dog
  * @name: his name
