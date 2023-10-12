@@ -3,9 +3,9 @@
 #include <stdio.h>
 
 /**
- * print_numbers - print undefined number of integers
- * @separator: char to separate printed integers
- * @n:the number of integers
+ * print_strings - print undefined number of integers
+ * @separator: char to separate printed strings
+ * @n:the number of strings
  *
  */
 
