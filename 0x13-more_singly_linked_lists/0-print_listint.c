@@ -1,6 +1,7 @@
 #include "lists.h"
-/*
- * print_listint - print all list elements
+
+/**
+ * print_listint - print all list
  * @h: the list
  * Return: number of nodes
  */
@@ -19,5 +20,4 @@ size_t print_listint(const listint_t *h)
 		i++;
 	}
 	return (i);
-
 }
