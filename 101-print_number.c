@@ -31,6 +31,6 @@ void print_number(int n)
 	}
 	for (i = 0; i < lenth; i++)
 	{
-		digit = n / power(10, lenth
+		digit = n / power(10, lenth);
 	}
 }
