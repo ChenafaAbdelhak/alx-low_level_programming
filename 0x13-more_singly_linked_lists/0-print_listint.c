@@ -1,7 +1,4 @@
-#include "main.h"
-#include <stdlib.h>
-#include <stddef.h>
-
+#include "lists.h"
 /*
  * print_listint - print all list elements
  * @h: the list
@@ -11,14 +8,14 @@
 size_t print_listint(const listint_t *h)
 {
 	size_t i = 0;
-	listint_l *node = h;
 	
-	if (node == NULL)
+	if (h == NULL)
 		return (0);
 
-	while (node != NULL)
+	while (h != NULL)
 	{
-		printf("%d\n", node->n);
+		printf("%d\n",h->n);
+		h = h->next;
 		i++;
 	}
 	return (i);
