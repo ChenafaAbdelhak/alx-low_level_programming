@@ -4,7 +4,7 @@
  * read_textfile - read and print text file
  * @filename : the filename to start
  * @letters : num of letters
- * Return: 
+ * Return: number of let
  */
 
 ssize_t read_textfile(const char *filename, size_t letters)
