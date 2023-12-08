@@ -6,49 +6,34 @@
  * @n: n
  * Return: the new node
  */
-
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
-	dlistint_t *node, *i_node, *pr, *head = *h;
+	dlistint_t *new_node, *temp = *h;
+	unsigned int i;
+
+	new_node = malloc(sizeof(dlistint_t));
+	if (new_node == NULL)
+		return (NULL);
+
+	new_node->n = n;
 
 	if (idx == 0)
-		return add_dnodeint(h, n);
+		return (add_dnodeint(h, n));
 
-	node = get_dnodeint_at_index(head, idx);
-	if (!node)
+	for (i = 0; i < idx - 1 && temp != NULL; i++)
+		temp = temp->next;
+
+	if (temp == NULL)
+	{
+		free(new_node);
 		return (NULL);
+	}
 
-	i_node = malloc(sizeof(dlistint_t));
-	if (!i_node)
-		return (NULL);
+	new_node->next = temp->next;
+	new_node->prev = temp;
+	if (temp->next != NULL)
+		temp->next->prev = new_node;
+	temp->next = new_node;
 
-	i_node->n = n;
-	i_node->next = node;
-	pr = node->prev;
-	pr->next = i_node;
-	i_node->prev = pr;
-	node->prev = i_node;
-
-	return (i_node);
-}
-
-/**
- * get_dnodeint_at_index - get the idxth node
- * @head: the head
- * @index: index
- * Return: the idxth node
- */
-
-dlistint_t *get_dnodeint_at_index(dlistint_t *head, unsigned int index)
-{
-        unsigned int i = 0;
-
-        while (head)
-        {
-                if (i == index)
-                        return (head);
-                i++;
-                head = head->next;
-        }
-        return (NULL);
+	return (new_node);
 }
