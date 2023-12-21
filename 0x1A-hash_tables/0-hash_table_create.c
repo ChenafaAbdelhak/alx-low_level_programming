@@ -15,10 +15,10 @@ hash_table_t *hash_table_create(unsigned long int size)
 		return (NULL);
 
 	ht->array = calloc(size, sizeof(hash_table_t *));
-	if(ht->array == NULL)
+	if (ht->array == NULL)
 	{
 		free(ht);
-		return(NULL);
+		return (NULL);
 	}
 
 	ht->size = size;
